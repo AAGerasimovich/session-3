@@ -106,9 +106,9 @@ public class AccountServiceImplTest {
         assertEquals(Result.OK, res);
 
         fraudMonitoring.thieves.add(1L);
+        System.out.println(fraudMonitoring.check(1L));
 
         res = accountService.create(1, 1, 10f, RUR);
-
         assertEquals(Result.FRAUD, res);
     }
 
